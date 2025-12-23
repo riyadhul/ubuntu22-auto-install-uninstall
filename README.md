@@ -45,8 +45,8 @@ Script otomatis untuk instalasi lengkap Development Environment di Ubuntu 22.04 
 
 ```bash
 # 1. Download/Clone repository
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+https://github.com/riyadhul/ubuntu22-auto-install-uninstall.git
+cd ubuntu22-auto-install-uninstall
 
 # 2. Beri permission
 chmod +x install.sh uninstall.sh
