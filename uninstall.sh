@@ -23,7 +23,6 @@ systemctl stop php8.2-fpm 2>/dev/null || true
 systemctl stop php8.3-fpm 2>/dev/null || true
 systemctl stop mariadb 2>/dev/null || true
 systemctl stop mysql 2>/dev/null || true
-systemctl stop bind9 2>/dev/null || true
 pm2 kill 2>/dev/null || true
 
 # Uninstall Google Chrome
@@ -124,11 +123,6 @@ rm -f /usr/share/nginx/html/dbmyadmin
 # Uninstall Certbot
 echo "13. Uninstalling Certbot..."
 apt remove --purge -y certbot python3-certbot-nginx 2>/dev/null || true
-
-# Uninstall Bind9
-echo "14. Uninstalling Bind9..."
-apt remove --purge -y bind9 bind9utils bind9-doc dnsutils 2>/dev/null || true
-rm -rf /etc/bind
 
 # Clean up
 echo "15. Deep cleaning system..."
