@@ -203,12 +203,6 @@ chmod -R 755 /usr/share/phpmyadmin
 echo "14. Install Certbot..."
 apt install -y certbot python3-certbot-nginx
 
-# Install Bind9
-echo "15. Install Bind9..."
-apt install -y bind9 bind9utils bind9-doc dnsutils
-systemctl start bind9
-systemctl enable bind9
-
 echo ""
 echo "=== Instalasi Selesai ==="
 echo ""
@@ -254,7 +248,6 @@ echo "Tools:"
 echo "  - Composer: $(composer --version 2>/dev/null | grep -oP 'Composer version \K[^ ]+')"
 echo "  - PM2: $(pm2 -v 2>/dev/null || echo 'Terinstal')"
 echo "  - Certbot: $(certbot --version 2>&1 | grep -oP 'certbot \K.*')"
-echo "  - Bind9: $(named -v 2>&1 | grep -oP 'BIND \K[^ ]+')"
 echo ""
 echo "========================================"
 echo "KONFIGURASI:"
@@ -300,13 +293,10 @@ echo ""
 echo "5. Setup SSL dengan Certbot:"
 echo "   sudo certbot --nginx -d yourdomain.com"
 echo ""
-echo "6. Konfigurasi Bind9:"
-echo "   Edit: /etc/bind/named.conf.local"
-echo ""
-echo "7. Untuk menggunakan Bun, restart shell atau jalankan:"
+echo "6. Untuk menggunakan Bun, restart shell atau jalankan:"
 echo "   source /etc/profile.d/bun.sh"
 echo ""
-echo "8. PM2 sudah auto-startup, untuk manage aplikasi:"
+echo "7. PM2 sudah auto-startup, untuk manage aplikasi:"
 echo "   pm2 start app.js --name myapp"
 echo "   pm2 list"
 echo "   pm2 logs"
