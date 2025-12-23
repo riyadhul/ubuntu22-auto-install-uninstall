@@ -37,7 +37,6 @@ Script otomatis untuk instalasi lengkap Development Environment di Ubuntu 22.04 
 ### Tools
 - Composer (PHP dependency manager)
 - Certbot (SSL manager dengan nginx plugin)
-- Bind9 (DNS Server)
 
 ---
 
