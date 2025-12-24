@@ -96,12 +96,6 @@ rm -rf /usr/local/lib/node_modules
 rm -f /etc/apt/sources.list.d/nodesource.list
 rm -f /usr/share/keyrings/nodesource.gpg
 
-# Uninstall Bun
-echo "10. Uninstalling Bun.js..."
-rm -rf ~/.bun
-rm -f /etc/profile.d/bun.sh
-rm -rf /root/.bun
-
 # Uninstall MariaDB
 echo "11. Uninstalling MariaDB (including all databases)..."
 systemctl stop mariadb 2>/dev/null || true
