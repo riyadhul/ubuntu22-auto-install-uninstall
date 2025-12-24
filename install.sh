@@ -156,13 +156,6 @@ npm install -g pm2
 pm2 startup systemd -u root --hp /root
 pm2 save
 
-# Install Bun.js
-echo "11. Install Bun.js..."
-curl -fsSL https://bun.sh/install | bash
-# Add Bun to system PATH
-echo 'export BUN_INSTALL="/root/.bun"' >> /etc/profile.d/bun.sh
-echo 'export PATH="$BUN_INSTALL/bin:$PATH"' >> /etc/profile.d/bun.sh
-source /etc/profile.d/bun.sh || true
 
 # Install MariaDB (latest stable)
 echo "12. Install MariaDB..."
@@ -238,7 +231,6 @@ echo "JavaScript Runtimes:"
 echo "  - Node.js: $(node -v 2>/dev/null || echo 'Terinstal')"
 echo "  - NPM: $(npm -v 2>/dev/null || echo 'Terinstal')"
 echo "  - PM2: $(pm2 -v 2>/dev/null || echo 'Terinstal')"
-echo "  - Bun: $(~/.bun/bin/bun -v 2>/dev/null || echo 'Terinstal (restart shell untuk menggunakan)')"
 echo ""
 echo "Database:"
 echo "  - MariaDB: $(mysql --version 2>/dev/null | grep -oP 'Distrib \K[^,]+')"
@@ -293,10 +285,7 @@ echo ""
 echo "5. Setup SSL dengan Certbot:"
 echo "   sudo certbot --nginx -d yourdomain.com"
 echo ""
-echo "6. Untuk menggunakan Bun, restart shell atau jalankan:"
-echo "   source /etc/profile.d/bun.sh"
-echo ""
-echo "7. PM2 sudah auto-startup, untuk manage aplikasi:"
+echo "6. PM2 sudah auto-startup, untuk manage aplikasi:"
 echo "   pm2 start app.js --name myapp"
 echo "   pm2 list"
 echo "   pm2 logs"
