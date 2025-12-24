@@ -28,7 +28,6 @@ Script otomatis untuk instalasi lengkap Development Environment di Ubuntu 22.04 
 - Node.js 22
 - NPM (latest)
 - PM2 (process manager)
-- Bun.js (latest)
 
 ### Database
 - MariaDB 11.4
